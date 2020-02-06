@@ -1,9 +1,5 @@
 <?php
-/**
- * Trumbowyg plugin.
- *
- * It transforms all the editable areas into the Trumbowyg inline editor.
- *
+/* SimpleMDE content plugin with Marked.js for page visits.
  * @author Marcel Portma
  * @version 3.0.1
  */
@@ -20,9 +16,14 @@ $Wcms->addListener('css', 'mdeCSS');
 
 function mdeJS($args) {
   global $Wcms;
+   if ($Wcms) {
+    $script = <<<EOT
+      <script src="https://cdn.jsdelivr.net/npm/marked@0.8.0/lib/marked.js"></script>
+EOT;
+    $args[0] .= $script;
+   }
    if (!$Wcms->loggedIn) {
     $script = <<<EOT
-      <script src="{$Wcms->url('plugins/wonder-markdown/js/snarkdown.js')}"></script>
       <script src="{$Wcms->url('plugins/wonder-markdown/js/visitor.js')}"></script>
 EOT;
     $args[0] .= $script;
@@ -39,15 +40,10 @@ EOT;
 
 function mdeCSS($args) {
   global $Wcms;
-  if (!$Wcms->loggedIn) {
+    if ($Wcms) {
     $script = <<<EOT
-      <link rel="stylesheet" href="{$Wcms->url('plugins/wonder-markdown/css/wmd-styles.css')}" media="screen">
-EOT;
-    $args[0] .= $script;
-  }
-    if ($Wcms->loggedIn) {
-    $script = <<<EOT
-      <link rel="stylesheet" href="{$Wcms->url('plugins/wonder-markdown/css/simple-mde.css')}" media="screen">
+      <link rel="stylesheet" href="{$Wcms->url('plugins/wonder-markdown/css/wmd-styles.css')}">
+      <link rel="stylesheet" href="{$Wcms->url('plugins/wonder-markdown/css/simple-mde.css')}">
 EOT;
     $args[0] .= $script;
    }

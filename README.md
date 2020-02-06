@@ -3,7 +3,7 @@
 ## Description
 
 This WonderCMS plugin adds [SimpleMDE](https://github.com/sparksuite/simplemde-markdown-editor) Markdown editor.
-For page visitors the content will be parsed via [Snarkdown](https://github.com/developit/snarkdown).
+For page visitors the content will be parsed via [Marked](https://github.com/markedjs/marked).
 
 ## Preview
 

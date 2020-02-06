@@ -1,9 +1,11 @@
 $(function() {
-  $('.editText').one('click', function() {
-    (a = $(this)), (title = a.attr('id'));
+  const a = $('.editable')
+  a.one('click', function() {
+    const title = a.id
+    console.log(`Editing #${title}!`)
     setTimeout(() => {
-      a.children(':first').removeAttr('onblur');
-      let simplemde = new SimpleMDE({
+      a.children(':first').attr('onblur', null)
+      const simplemde = new SimpleMDE({
         element: $('textarea')[0],
         toolbar: [
           'bold','italic','heading','|',
@@ -15,14 +17,13 @@ $(function() {
           {
             name: 'save',
             action: function(editor) {
-              fieldSave(a.attr('id'), editor.value(), a.data('target'), a.data('menu'), a.data('visibility'));
-              // console.log(editor.value());
+              fieldSave(a.attr('id'), editor.value(), a.data('target'), a.data('menu'), a.data('visibility'))
             },
             className: 'fa fa-save',
-            title: 'Save!',
-          },
-        ],
-      });
-    }, 50);
-  });
-});
+            title: 'Save!'
+          }
+        ]
+      })
+    }, 50)
+  })
+})
