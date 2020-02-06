@@ -1,7 +1,6 @@
 $(function() {
-  const a = $('.editable');
-  a.one('click', function() {
-    const title = a.id;
+  $('.editable').one('click', function() {
+    (a = $(this)[0], title = a.id);
     console.log(`Editing #${title}!`);
     setTimeout(() => {
       a.children(':first').attr('onblur', null);
@@ -16,7 +15,7 @@ $(function() {
           'preview','side-by-side','fullscreen','|',
           {
             name: 'save',
-            action: function(editor) {
+            action: editor => {
               fieldSave(a.attr('id'), editor.value(), a.data('target'), a.data('menu'), a.data('visibility'));
             },
             className: 'fa fa-save',
@@ -26,6 +25,6 @@ $(function() {
       });
       /* return the editor for consoling */
       return (WMD = simplemde);
-    }, 50);
+    });
   });
 });
