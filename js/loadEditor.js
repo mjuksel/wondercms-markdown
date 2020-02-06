@@ -24,6 +24,7 @@ $(function() {
           }
         ]
       });
+      /* return the editor for consoling */
       return (WMD = simplemde);
     }, 50);
   });
