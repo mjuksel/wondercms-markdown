@@ -22,7 +22,7 @@ $(function() {
             title: 'Save!'
           }
         ]
-      });
+      },1);
       /* return the editor for consoling */
       return (WMD = simplemde);
     });

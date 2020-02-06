@@ -7,7 +7,7 @@ $(function() {
    * Finally render content + hide source area.
    */
   if (testChildren === 0) {
-  const txt = marked(cont.text());
-  cont.before(`<div class="markdown-body">${txt}</div>`).hide();
+    const txt = marked(cont.text());
+    cont.before(`<div class="markdown-body">${txt}</div>`).hide();
   }
 });
