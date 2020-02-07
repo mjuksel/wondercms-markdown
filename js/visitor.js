@@ -1,5 +1,5 @@
 $(function() {
-  const cont = $('#content');
+  const cont = $('[id*=content]');
   const testChildren = cont.children().length;
   /*
    * Check if content has children.
