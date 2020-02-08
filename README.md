@@ -8,4 +8,4 @@ For page visitors the content will be parsed via [Marked](https://github.com/mar
 
 ## Preview
 
-![Plugin preview](preview.png)
+![Plugin preview](preview.jpg)
