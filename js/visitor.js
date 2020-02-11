@@ -5,5 +5,8 @@ marked.setOptions({
   breaks: true
 });
 $(() => {
-  $('#content').html(marked($('#content').html()))
+  var cont = $('#content');
+  if(cont.children().length === 0) {
+    cont.html(marked(cont.html()));
+  }
 });

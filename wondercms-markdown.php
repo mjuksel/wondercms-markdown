@@ -1,7 +1,7 @@
 <?php
 /* SimpleMDE content plugin with Marked.js for page visits.
  * @author Marcel Portma
- * @version 3.0.1
+ * @version 3.0.2
  */
 
 global $Wcms;
@@ -24,14 +24,14 @@ EOT;
    }
    if (!$Wcms->loggedIn) {
     $script = <<<EOT
-      <script src="{$Wcms->url('plugins/wonder-markdown/js/visitor.js')}"></script>
+      <script src="{$Wcms->url('plugins/wondercms-markdown/js/visitor.js')}"></script>
 EOT;
     $args[0] .= $script;
    }
    if ($Wcms->loggedIn) {
     $script = <<<EOT
       <script src="https://cdn.jsdelivr.net/npm/simplemde@1.11.2/dist/simplemde.min.js"></script>
-      <script src="{$Wcms->url('plugins/wonder-markdown/js/loadEditor.js')}"></script>
+      <script src="{$Wcms->url('plugins/wondercms-markdown/js/loadEditor.js')}"></script>
 EOT;
     $args[0] .= $script;
    }
@@ -43,7 +43,7 @@ function mdeCSS($args) {
   if ($Wcms) {
   $script = <<<EOT
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.min.css">
-    <link rel="stylesheet" href="{$Wcms->url('plugins/wonder-markdown/css/custom.css')}">
+    <link rel="stylesheet" href="{$Wcms->url('plugins/wondercms-markdown/css/custom.css')}">
 EOT;
   $args[0] .= $script;
  }

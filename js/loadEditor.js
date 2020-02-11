@@ -3,7 +3,7 @@ $(function() {
     (a = $(this)[0], title = a.id);
     console.log(`Editing #${title}!`);
     setTimeout(() => {
-      a.children(':first').attr('onblur', null);
+      $('textarea').attr('onblur', null);
       const simplemde = new SimpleMDE({
         element: $('textarea')[0],
         toolbar: [
@@ -22,9 +22,9 @@ $(function() {
             title: 'Save!'
           }
         ]
-      },1);
+      });
       /* return the editor for consoling */
       return (WMD = simplemde);
-    });
+    }, 50);
   });
 });
