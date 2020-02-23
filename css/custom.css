@@ -2,11 +2,15 @@
  * This is a placeholder for placing custom css rules.
  */
 
-.editor-statusbar, .editor-toolbar {
+.editor-toolbar {
   background: #EEEEEE;
-  opacity: 1;
 }
 
-.editor-statusbar:hover, .editor-toolbar:hover {
-  opacity: 1;
+.editor-statusbar {
+  background: transparent;
+  color: inherit !important;
+}
+
+.editor-statusbar, .editor-toolbar, .editor-statusbar:hover, .editor-toolbar:hover {
+  opacity: 1 !important;
 }
