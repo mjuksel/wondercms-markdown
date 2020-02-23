@@ -1,7 +1,9 @@
 <?php
-/* SimpleMDE content plugin with Marked.js for page visits.
+/**
+ * SimpleMDE content plugin with Marked.js for page visits.
+ *
  * @author Marcel Portma
- * @version 3.0.4
+ * @version 3.0.5
  */
 
 global $Wcms;
