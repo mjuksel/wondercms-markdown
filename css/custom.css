@@ -14,3 +14,11 @@
 .editor-statusbar, .editor-toolbar, .editor-statusbar:hover, .editor-toolbar:hover {
   opacity: 1 !important;
 }
+
+.editor-preview-side {
+  color: #000;
+}
+
+.CodeMirror, .editor-preview-side {
+  text-align: left !important;
+}

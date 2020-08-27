@@ -15,7 +15,12 @@ window.addEventListener('load', () => {
         {
           name: 'save',
           action: editor => {
-            fieldSave(el.id, editor.value(), el.dataset.target);
+            $.post('', {
+              id: el.id,
+              content: editor.value(),
+              target: el.dataset.target,
+              token: token
+            })
           },
           className: 'fa fa-save',
           title: 'Save!'

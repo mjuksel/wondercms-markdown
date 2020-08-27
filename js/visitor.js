@@ -4,9 +4,8 @@
 marked.setOptions({
   breaks: true
 });
-$(() => {
-  var cont = $('#content');
-  if(cont.children().length === 0) {
-    cont.html(marked(cont.html()));
-  }
+const sect = document.querySelectorAll('section');
+sect.forEach(element => {
+  let txt = element.textContent.trim();
+  if (txt != '') element.innerHTML = marked(txt);
 });

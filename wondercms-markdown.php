@@ -3,7 +3,7 @@
  * SimpleMDE content plugin with Marked.js for page visits.
  *
  * @author Marcel Portma
- * @version 3.0.5
+ * @version 3.0.6
  */
 
 global $Wcms;
@@ -20,7 +20,7 @@ function mdeJS($args) {
   global $Wcms;
    if ($Wcms) {
     $script = <<<EOT
-      <script src="https://cdn.jsdelivr.net/npm/marked@0.8.0/lib/marked.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/marked"></script>
 EOT;
     $args[0] .= $script;
    }
@@ -44,7 +44,7 @@ function mdeCSS($args) {
   global $Wcms;
   if ($Wcms) {
   $script = <<<EOT
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@3.0.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css">
     <link rel="stylesheet" href="{$Wcms->url('plugins/wondercms-markdown/css/custom.css')}">
 EOT;
   $args[0] .= $script;
