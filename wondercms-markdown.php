@@ -3,7 +3,7 @@
  * SimpleMDE content plugin with Marked.js for page visits.
  *
  * @author Marcel Portma
- * @version 3.0.6
+ * @version 3.0.7
  */
 
 global $Wcms;
