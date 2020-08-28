@@ -9,5 +9,5 @@ marked.setOptions({
 
 sect.forEach(element => {
   let txt = element.textContent.trim();
-  if (txt != '') element.innerHTML = marked(txt);
+  if (txt != '' && !txt.includes('Login')) element.innerHTML = marked(txt);
 });
